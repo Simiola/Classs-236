@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    </head>
+    <body>
+        <script>
+            var myhtml
+            $(document).ready(function(){
+                $.ajax ({
+                    url: 'http://ec2-3-108-196-161.ap-south-1.compute.amazonaws.com/help',
+                    success:function(mydata){
+
+                        myhtml=mydata
+                        display()
+                    }
+
+                })
+            })
+            function display(){
+                $("body").append(myhtml)
+                $("col-lg-8").remove()
+            }
+
+
+
+        </script>
+    </body>
+    
+</html>
